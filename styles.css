@@ -105,7 +105,7 @@ section {
 /* Background for Home section */
 #home {
     text-decoration: none;
-    background: url(/ss_7924f64b6e5d586a80418c9896a1c92881a7905b.1920x1080.jpg) no-repeat center center/cover;
+    background: url(ss_7924f64b6e5d586a80418c9896a1c92881a7905b.1920x1080.jpg) no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     padding: 140px 20px 100px 20px;
@@ -114,7 +114,7 @@ section {
 
 /* Background for About section */
 #about {
-    background: url(/cyberpunk.jpg) no-repeat center center/cover;
+    background: url(cyberpunk.jpg) no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     padding: 100px 20px;
@@ -123,7 +123,7 @@ section {
 
 /* Background for Projects section */
 #projects {
-    background: url(/png-transparent-falling-data-numbers-matrix-hacker-background-thumbnail.png) no-repeat center center/cover;
+    background: url(png-transparent-falling-data-numbers-matrix-hacker-background-thumbnail.png) no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     padding: 100px 20px;
@@ -132,7 +132,7 @@ section {
 
 /* Background for Contact section */
 #contact {
-    background: url(/digital-world.jpg) no-repeat center center/cover;
+    background: url(digital-world.jpg) no-repeat center center/cover;
     color: #fff;
     text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
     padding: 100px 20px;
@@ -354,7 +354,7 @@ section a:hover h1, section a:hover p {
     width: 150px;
     height: 150px;
     border-radius: 50%;
-    background: url('/DSD_5206.JPG') no-repeat center center/cover;
+    background: url('DSD_5206.JPG') no-repeat center center/cover;
     border: 3px solid #ffe600;
     transition: transform 0.3s, box-shadow 0.3s;
 }
