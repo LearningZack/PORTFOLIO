@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Me</title>
+  <link rel="stylesheet" href="styles.css"/>
+  <style>
+    /* Page-specific layout fix */
+    body.contact-page {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      margin: 0;
+    }
+
+    body.contact-page section:hover {
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    .contact-container {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    .contact-form {
+      margin: 0;
+      padding: 0;
+    }
+
+    .contact-form input,
+    .contact-form textarea {
+      display: block;
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.8rem;
+      background-color: #222;
+      border: 2px solid #00ffff;
+      border-radius: 4px;
+      color: #fff;
+    }
+
+    .contact-form textarea {
+      height: 150px;
+      resize: vertical;
+    }
+
+    .contact-form button[type="submit"] {
+      padding: 12px 20px;
+      font-size: 1rem;
+      width: auto;
+      display: block;
+      margin: 20px auto 0; /* top margin only */
+      background-color: #ffe600;
+      color: black;
+      border: none;
+      border-radius: 6px;
+      box-shadow: 0 0 10px #ffe600;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .contact-form button[type="submit"]:hover {
+      background-color: #ffcc00;
+    }
+
+    footer.contact-footer {
+      background-color: #000;
+      color: #ffe600;
+      text-align: center;
+      padding: 1rem 0;
+      margin-top: auto;
+    }
+  </style>
+</head>
+
+<body class="contact-page">
+  <header>
+    <div class="logo-container">
+      <a href="index.html">
+        <img src="ugay1.png" alt="Site Logo" class="logo"/>
+      </a>
+    </div>
+    <h1>I.N.M.U Creatives.</h1>
+    <nav>
+      <ul>
+          <li><a href="home.html" >Home</a></li>
+          <li><a href="about.html" >About</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="contacts.html"class="active">Contact</a></li>
+      </ul>
+  </nav>
+  </header>
+
+  <video autoplay muted loop id="bg-video">
+    <source src="116679-708909908.mp4" type="video/mp4"/>
+  </video>
+
+  <section class="contact-container">
+    <h2>Get in <span style="color:#00ffff;">Touch</span></h2>
+    <p>Feel free to reach out for collaborations, inquiries, or just to say hi!</p>
+
+    <form class="contact-form">
+      <label for="name">Name</label>
+      <input type="text" id="name" placeholder="Enter your name" required />
+
+      <label for="email">Email</label>
+      <input type="email" id="email" placeholder="Enter your email" required />
+
+      <label for="message">Message</label>
+      <textarea id="message" placeholder="Write your message here..." required></textarea>
+
+      <button type="submit">SEND MESSAGE</button>
+    </form>
+  </section>
+
+<!-- Cyberpunk-style popup modal -->
+<div id="cyberpunk-modal" class="modal">
+  <div class="modal-content">
+    <h3>Message Sent <span>Successfully</span></h3>
+    <button id="close-modal">OK</button>
+  </div>
+</div>
+
+
+  <footer class="contact-footer">
+    <p>&copy; I.N.M.U Creatives All rights reserved.
+  </footer>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // Active nav link highlight
+      const currentPage = window.location.pathname.split("/").pop();
+      const navLinks = document.querySelectorAll("nav ul li a");
+  
+      navLinks.forEach(link => {
+        const linkPage = link.getAttribute("href");
+        if (linkPage === currentPage || (linkPage === "index.html" && currentPage === "")) {
+          link.classList.add("active");
+        }
+      });
+  
+      // Cyberpunk modal handling
+      const form = document.querySelector(".contact-form");
+      const modal = document.getElementById("cyberpunk-modal");
+      const closeModal = document.getElementById("close-modal");
+  
+      form.addEventListener("submit", function (e) {
+        e.preventDefault(); // Prevent actual submission
+        modal.style.display = "flex"; // Show the modal
+        form.reset(); // Optional: Clear form
+      });
+  
+      closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+      });
+  
+      // Optional: Close on outside click
+      window.addEventListener("click", (e) => {
+        if (e.target === modal) {
+          modal.style.display = "none";
+        }
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>

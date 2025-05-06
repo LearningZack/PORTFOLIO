@@ -1,0 +1,604 @@
+/* Reset default margins and padding on html and body */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+}
+
+/* Importing a custom font */
+@font-face {
+    font-family: "eclipse";
+    src: url(Lunar\ Escape.otf);
+}
+
+/* Base styles for body */
+body {
+    font-family: "eclipse";
+    background: #1b1b1b;
+    color: #ffe600;
+    text-align: center;
+    height: 100%;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 100px
+}
+
+main {
+    flex: 1 0 auto;
+}
+
+/* Header styling with flex layout */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px 20px; /* 10px top/bottom, 20px left/right */
+    box-shadow: 0 0 20px #ffe600;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999; /* ensures it's above everything else */
+}
+
+/* Logo size */
+.logo {
+    width: 160px;
+    height: auto;
+    max-height: 60px;
+    margin-right: 15px;
+}
+
+/* Navigation menu */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Inline nav items */
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+/* Nav links styling */
+nav ul li a {
+    color: #ffe600;
+    text-decoration: none;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+/* Highlight the current page nav link */
+nav ul li a.active {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+    font-weight: bold;
+    border-bottom: 2px solid #00ffff;
+}
+
+/* Hover effect for nav links */
+nav ul li a:hover {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+/* Hover effect for any section h1 or p inside an anchor tag */
+section a h1 p:hover {
+    color: #00ffff;
+    text-shadow: 0 0 5px #00ffff, 0 0 10px #00ffff;
+}
+
+/* Section spacing */
+section {
+    padding: 60px 20px;
+    transition: 0.3s;
+    border-radius: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+/* Background for Home section */
+#home {
+    text-decoration: none;
+    background: url(/ss_7924f64b6e5d586a80418c9896a1c92881a7905b.1920x1080.jpg) no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 140px 20px 100px 20px;
+    width: 100%;
+}
+
+/* Background for About section */
+#about {
+    background: url(/cyberpunk.jpg) no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 100px 20px;
+    width: 100%;
+}
+
+/* Background for Projects section */
+#projects {
+    background: url(/png-transparent-falling-data-numbers-matrix-hacker-background-thumbnail.png) no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 100px 20px;
+    width: 100%;
+}
+
+/* Background for Contact section */
+#contact {
+    background: url(/digital-world.jpg) no-repeat center center/cover;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    padding: 100px 20px;
+    width: 100%;
+}
+
+/* Link base styles */
+a {
+    text-decoration: none;
+    color: #ffe600;
+}
+
+/* Hover effect for entire section */
+section:hover {
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+    transform: scale(1.02);
+}
+
+/* Redundant hover definition (merged above) */
+section:hover {
+    box-shadow: 0 0 20px #ffe600, 0 0 40px #00ffff;
+    transform: scale(1.02);
+}
+
+/* Anchor tags inside section */
+section a {
+    text-decoration: none;
+    color: inherit;
+    transition: 0.3s;
+}
+
+/* Hover effect for section links' h1 and p */
+section a:hover h1, section a:hover p {
+    color: #23d6a9;
+    text-shadow: 0 0 10px #23d6a9, 0 0 20px #23d6a9;
+}
+
+/* Footer design */
+  /* Sticky Footer */
+  footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    color: yellow;
+    text-align: center;
+    padding: 10px 0;
+    z-index: 1000;
+  }
+
+/* Contact page layout */
+.contact-page {
+    font-family: "eclipse", Arial, sans-serif;
+    background: #1b1b1b;
+    color: #ffe600;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    min-height: 100vh;
+}
+
+/* Header for contact page */
+.contact-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: rgba(0, 0, 0, 0.9);
+    padding: 10px;
+    box-shadow: 0 0 20px #ffe600;
+}
+
+/* Contact form container */
+.contact-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+    box-shadow: 0 0 20px #00ffff;
+    text-align: left;
+}
+
+/* Form layout */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Label styling */
+.contact-form label {
+    font-size: 18px;
+}
+
+/* Input and textarea styles */
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: #ffe600;
+    box-shadow: 0 0 5px #00ffff;
+}
+
+/* Textarea specific styles */
+.contact-form textarea {
+    height: 150px;
+    resize: none;
+}
+
+/* Focus effects for inputs */
+.contact-form input:focus,
+.contact-form textarea:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+/* Button styles */
+.contact-form button {
+    background: #ffe600;
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    text-transform: uppercase;
+    box-shadow: 0 0 10px #ffe600;
+}
+
+/* Button hover effect */
+.contact-form button:hover {
+    background: #00ffff;
+    color: black;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+/* Info grid layout for Welcome and Skills section */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+/* Styling for grid boxes */
+.welcome-box, .skills-box {
+    background-color: #1c1c1c;
+    border: 2px solid #ffe600;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 255, 255, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect for grid boxes */
+.welcome-box:hover, .skills-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+}
+
+/* Heading color for welcome and skills */
+.welcome-box h2, .skills-box h2 {
+    color: #ffe600;
+}
+
+/* Text content color for welcome and skills */
+.welcome-box p, .skills-box ul {
+    color: #fff;
+}
+
+.download-btn {
+    display: inline-block;
+    background-color: #ffe600;
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-weight: bold;
+    font-size: 18px;
+    text-decoration: none;
+    box-shadow: 0 0 10px #ffe600;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.2s;
+    text-transform: uppercase;
+}
+
+.download-btn:hover {
+    background-color: #00ffff;
+    color: #000;
+    box-shadow: 0 0 20px #00ffff;
+    transform: scale(1.05);
+}
+
+/* Background video styling */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100vw;
+    min-height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Profile image and container */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: url('/DSD_5206.JPG') no-repeat center center/cover;
+    border: 3px solid #ffe600;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.profile-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 15px #00ffff;
+}
+
+/* Social Media Icons */
+.fa {
+    padding: 15px;
+    font-size: 24px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.3s ease;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-facebook {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-instagram {
+    background: #E1306C;
+    color: white;
+}
+
+.fa-google {
+    background: #dd4b39;
+    color: white;
+}
+
+.fa-pinterest {
+    background: #cb2027;
+    color: white;
+}
+
+.fa-youtube {
+    background: #bb0000;
+    color: white;
+}
+
+/* Social Media Icons Container */
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+    margin-top: 5%;
+}
+
+/* Container holding carousel and text */
+.projects-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    gap: 40px;
+    padding: 40px 20px;
+    max-width: 100%;
+    margin: 0 auto;
+    width: 100%;
+}
+
+/* Carousel styling */
+.carousel-wrapper {
+    width: 100%;
+    height: 60vh;
+    overflow: hidden;
+    position: relative;
+    border: 3px solid #ffe600;
+    box-shadow: 0 0 15px #00ffff;
+    border-radius: 12px;
+}
+
+/* Carousel animation */
+.carousel-track {
+    display: flex;
+    height: 100%;
+    width: max-content;
+    animation: scroll-carousel 25s linear infinite;
+}
+
+.carousel-track img {
+    width: 100vw;
+    height: 60vh;
+    object-fit: cover;
+    flex-shrink: 0;
+}
+
+/* Animation for automatic slide */
+@keyframes scroll-carousel {
+    0%, 20% {
+        transform: translateX(0);
+    }
+    25%, 45% {
+        transform: translateX(-100vw);
+    }
+    50%, 70% {
+        transform: translateX(-200vw);
+    }
+    75%, 95% {
+        transform: translateX(-300vw);
+    }
+    100% {
+        transform: translateX(-400vw);
+    }
+}
+
+/* Project text area */
+.project-description {
+    text-align: center;
+}
+
+.project-description h1 {
+    font-size: 2.5rem;
+    margin: 0 0 10px;
+    color: #ffe600;
+}
+
+.project-description h2 {
+    font-size: 1.2rem;
+    color: #ffffff;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.projects-grid:hover {
+    box-shadow: none !important;
+    transform: none !important;
+}
+
+/* Ensure no extra margins or padding cause overflow */
+* {
+    box-sizing: border-box;
+}
+
+/* Prevent horizontal scrolling */
+html {
+    overflow-x: hidden;
+}
+
+/* Media query for smaller screen sizes */
+@media (max-width: 768px) {
+    .carousel-track {
+        width: 100vw;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-image {
+        width: 120px;
+        height: 120px;
+    }
+}
+
+.resume-image {
+    display: block;
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin: 120px auto 20px auto; /* increased top margin */
+    padding-top: 10px;
+    box-sizing: border-box;
+}
+
+/* Cyberpunk-style modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 9999;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #111;
+    border: 2px solid #00ffff;
+    box-shadow: 0 0 20px #ffe600, 0 0 40px #00ffff;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 12px;
+    color: #ffe600;
+    font-family: 'Orbitron', sans-serif;
+    max-width: 300px;
+    width: 90%;
+    animation: fadeInScale 0.4s ease;
+  }
+  
+  .modal-content h3 {
+    margin: 0 0 1rem;
+    font-size: 1.5rem;
+    color: #00ffff;
+  }
+  
+  .modal-content h3 span {
+    color: #ffe600;
+  }
+  
+  .modal-content button {
+    margin-top: 1rem;
+    background-color: #ffe600;
+    color: #000;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    box-shadow: 0 0 10px #ffe600;
+    transition: background-color 0.3s ease;
+  }
+  
+  .modal-content button:hover {
+    background-color: #ffcc00;
+  }
+  
+  @keyframes fadeInScale {
+    from {
+      opacity: 0;
+      transform: scale(0.85);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+  
